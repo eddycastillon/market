@@ -1,0 +1,26 @@
+{% from 'utils/_form_fields.html' import render_field, button_field %}
+
+{% macro form_base(form) %}
+<div class="row">
+    <div class="col-md-6 col-12">
+        <div class="form-group">
+            {{ render_field(form.stock, class_="form-control", icon=False, placeholder='Titulo') }}
+        </div>
+    </div>
+    <div class="col-md-6 col-12">
+        <div class="form-group">
+            {{ render_field(form.warehouse_id, class_="form-select", icon=False, placeholder='Nombre') }}
+        </div>
+    </div>
+    <div class="col-md-6 col-12">
+        <div class="form-group">
+            {{ render_field(form.product_id, class_="form-select", icon=False, placeholder='Código interno') }}
+        </div>
+    </div>
+</div>
+
+<div class="col-12 d-flex justify-content-end">
+    {{ button_field(form.submit, class_="btn btn-primary me-1 mb-1") }}
+</div>
+
+{% endmacro %}

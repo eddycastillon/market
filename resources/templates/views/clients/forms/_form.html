@@ -1,0 +1,33 @@
+{% from 'utils/_form_fields.html' import render_field, button_field %}
+
+{% macro form_base(form) %}
+<div class="row">
+    <div class="col-12">
+        {{ render_field(form.name, 
+            class_="form-control", icon=False, placeholder='Nombre de cliente') }}
+    </div>
+    <div class="col-12">
+        {{ render_field(form.lastname, 
+            class_="form-control", icon=False, placeholder='Apellido de cliente') }}
+    </div>
+    <div class="col-12">
+        {{ render_field(form.identity_document, 
+            class_="form-control", icon=False, placeholder='Nro de documento') }}
+    </div>
+    <div class="col-12">
+        {{ render_field(form.email, 
+            class_="form-control", icon=False, placeholder='Email') }}
+    </div>
+    <div class="col-12">
+        {{ render_field(form.phone, 
+            class_="form-control", icon=False, placeholder='Celular') }}
+    </div>
+    <div class="col-12">
+        {{ render_field(form.address, 
+            class_="form-control", icon=False, placeholder='Domicilio') }}
+    </div>
+    <div class="col-12 d-flex justify-content-end">
+        {{ button_field(form.submit, class_="btn btn-primary me-1 mb-1") }}
+    </div>
+</div>
+{% endmacro %}

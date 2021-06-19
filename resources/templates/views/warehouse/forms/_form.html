@@ -1,0 +1,21 @@
+{% from 'utils/_form_fields.html' import render_field, button_field %}
+
+{% macro form_base(form) %}
+      <div class="row">
+        <div class="col-12">
+            {{ render_field(form.name, 
+                class_="form-control", icon=False, placeholder='Nombre de Almacen') }}
+        </div>
+        <div class="col-12">
+            {{ render_field(form.location, 
+                class_="form-control", icon=False, placeholder='Ubicación') }}
+        </div>
+        <div class="col-12">
+            {{ render_field(form.area, 
+                class_="form-control", icon=False, placeholder='Capacidad') }}
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+            {{ button_field(form.submit, class_="btn btn-primary me-1 mb-1") }}
+        </div>
+    </div>
+{% endmacro %}

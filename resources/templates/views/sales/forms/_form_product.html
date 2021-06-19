@@ -1,0 +1,14 @@
+{% from 'utils/_form_fields.html' import render_field, button_field %}
+
+{% macro form_base(form) %}
+<div class="row">
+    <div class="col-md-6 col-12">
+        <div class="form-group">
+            {{form }}
+        </div>
+    </div>
+</div>
+
+
+
+{% endmacro %}
